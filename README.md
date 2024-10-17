@@ -1,35 +1,48 @@
-# Covid-19-London-Crime-analysis
+# London Crime Analysis: Impact of COVID-19
 
-London Crime Analysis: Impact of COVID-19
+## Project Overview
 
-Description
+This project investigates the impact of the COVID-19 pandemic on crime patterns in London, focusing on how different types of crimes fluctuated during lockdowns and restrictive measures. By analyzing crime data across various periods (pre-pandemic, pandemic, post-pandemic), this study sheds light on the broader social effects of the pandemic and provides insights for future policy considerations.
 
-The COVID-19 pandemic brought unprecedented changes to everyday life, including shifts in crime patterns. This analysis examines how various types of crimes were affected by the pandemic in London, with a particular focus on periods of lockdown and other restrictive measures. The findings aim to provide insights into the social consequences of the pandemic and inform future policy decisions.
+## Objectives
 
-Data Sources
+Examine how crime rates evolved during the pandemic.
+Identify crime categories most affected by lockdowns and restrictions.
+Analyze the geographic and demographic variations in crime trends.
+Provide data-driven insights to inform future policy and social interventions.
 
-London Crime Data: Monthly crime statistics across London boroughs https://data.london.gov.uk/dataset/mps-monthly-crime-dahboard-data. COVID-19 Data: Information on COVID-19 cases, lockdown periods, and government responses. Demographic Data: Population data for London boroughs, used to normalize crime rates.
+## Methods
 
-Methodology
+#### Time Series Analysis:
+Segmentation of crime data into pre-, during-, and post-pandemic phases.
+Seasonal decomposition and trend identification using moving averages.
+#### Lockdown Impact:
+Interrupted Time Series Analysis (ITSA) to assess immediate effects of lockdowns on crime.
+Comparison of full lockdowns vs. partial restrictions on crime categories.
+#### Statistical Modeling:
+Autocorrelation analysis (ACF/PACF) and ARIMA models for crime trend forecasting.
+#### Geospatial Analysis:
+Crime rate mapping to highlight geographic variations.
+Spatial correlation using Moran’s I and LISA to identify crime clusters.
+#### Correlation Analysis:
+Examined the relationship between crime rates, COVID-19 cases, and socioeconomic factors such as population density and deprivation.
 
-Time Series Analysis The core of this study involves a detailed time series analysis of crime data across London. The following steps outline the approach:
+## Key Results
 
-Data Collection and Preparation:
+Property Crimes: Significant declines in burglary and theft, especially during strict lockdown periods.
+Domestic Violence: Notable increase in domestic violence incidents, particularly during the early stages of the pandemic.
+Geographic Variability: Crime trends varied across boroughs, influenced by local socioeconomic conditions.
 
-Monthly crime data was collected for various categories such as burglary, theft, violent crime, and domestic violence. The data was segmented into pre-pandemic, during-pandemic, and post-pandemic periods to allow for a clear comparison across different phases of the COVID-19 crisis. Trend Analysis:
+## Data Source
 
-Seasonal Decomposition: The crime data was decomposed into seasonal, trend, and residual components to identify underlying patterns. This helped in isolating the effect of seasonality from the actual trends caused by the pandemic. Moving Averages: To smooth out short-term fluctuations and highlight longer-term trends, moving averages were applied to the crime data. This was particularly useful in understanding the overall direction of crime rates before, during, and after the pandemic. Lockdown Impact Analysis:
+London Crime Data: Monthly crime statistics across London boroughs (Source).
+COVID-19 Data: Information on case numbers, lockdown periods, and government responses.
+Demographic Data: Population data to normalize crime rates by borough.
 
-The analysis focused on periods corresponding to the UK's lockdowns and social restrictions. The impact of these measures on crime rates was analyzed using interrupted time series analysis (ITSA), which allowed for the examination of immediate changes in crime following the imposition or lifting of lockdowns. Comparison of Lockdown Phases: Different phases of lockdown (e.g., full lockdown vs. partial restrictions) were compared to assess their differential impact on various types of crimes. Statistical Testing:
+## Tools & Technologies
 
-Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF): These were used to assess the presence of autocorrelation in the crime data, which informed the selection of appropriate time series models. ARIMA Modeling: For predictive analysis, ARIMA (AutoRegressive Integrated Moving Average) models were fitted to the crime data. This helped in understanding the expected crime trends in the absence of the pandemic, providing a baseline against which the actual data could be compared. Visualization:
-
-Various plots were generated to visually explore the trends in crime data over time. These include line charts for overall crime rates, bar charts for comparing pre- and post-pandemic periods, and heatmaps to show geographic variations in crime trends across London boroughs. Geospatial Analysis Mapping Crime Data: Crime rates were mapped to visualize the geographic impact of the pandemic. This highlighted areas with significant increases or decreases in crime during lockdowns. Spatial Correlation: Moran’s I and Local Indicators of Spatial Association (LISA) were used to assess the spatial correlation of crime rates across London, revealing clusters of high and low crime rates during different phases of the pandemic. Correlation Analysis Correlation with COVID-19 Cases: The correlation between the number of COVID-19 cases and changes in crime rates was explored, providing insights into how the pandemic's progression influenced criminal activity. Socioeconomic Factors: The analysis also considered correlations with socioeconomic data, such as population density and deprivation indices, to understand the broader context of crime trends during the pandemic.
-
-Key Findings
-
-Decrease in Property Crimes: Significant reductions in crimes like burglary and theft during lockdown periods, with the most notable drops occurring during the strictest lockdown phases. Increase in Domestic Violence: A noticeable rise in domestic violence incidents, particularly during the initial lockdown, correlating with stay-at-home orders. Geographic Variability: Crime patterns varied widely between different areas, with some boroughs experiencing greater changes than others.
-
-Conclusion
-
-The COVID-19 pandemic had a marked impact on crime rates in London, with both positive and negative changes observed across different types of crime. The time series analysis revealed clear trends, including a general reduction in property crimes and an increase in domestic-related incidents. These findings highlight the need for targeted interventions and policies to address the varying effects of the pandemic on different communities.
+Python for data analysis and visualization.
+Pandas and NumPy for data manipulation.
+Matplotlib and Seaborn for visualizing trends and patterns.
+GeoPandas for geospatial analysis and mapping.
+Statsmodels for time series analysis and statistical modeling.
